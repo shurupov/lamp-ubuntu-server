@@ -1,0 +1,27 @@
+
+Listen 81
+
+<VirtualHost *:81>
+	ServerAdmin webmaster@localhost
+
+	DocumentRoot /opt/sites/pma
+	<Directory />
+		Options FollowSymLinks
+		AllowOverride None
+	</Directory>
+	<Directory /opt/sites/pma/>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride None
+		Order allow,deny
+		allow from all
+	</Directory>
+
+	ErrorLog /opt/sites/pma/logs/error.log
+
+	# Possible values include: debug, info, notice, warn, error, crit,
+	# alert, emerg.
+	LogLevel warn
+
+	CustomLog /opt/sites/pma/logs/access.log combined
+
+</VirtualHost>
