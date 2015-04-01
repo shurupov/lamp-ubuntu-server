@@ -48,7 +48,7 @@ vagrant up --provision
 #!bash
 
 sudo su
-echo -e "\n\n192.168.10.10\tlamp.dev\n" >> /etc/hosts
+echo -e "\n\n192.168.10.11\tlamp.dev\n" >> /etc/hosts
 exit
 ```
 
